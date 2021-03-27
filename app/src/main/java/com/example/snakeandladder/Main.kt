@@ -56,7 +56,7 @@ fun createBoard(snakes: List<Snake>, ladders: List<Ladder>, players: List<Player
     endInd = maxPositionOnBoard,
     players = players,
     dice = Dice(minValue = minValueOnDice, maxValue = maxValueOnDice),
-    turn = 0
+    turn = 0        //assuming that first player will always get the first turn
 )
 
 
@@ -74,6 +74,7 @@ fun playGame(board: Board) {
 
         println("Player ${board.turn} rolled $nextMove and reached ${board.players[board.turn].position} from $currentPosition ")
 
+        //player will get another chance if he/she gets max value on dice
         if (nextMove == maxValueOnDice)
             continue
 
