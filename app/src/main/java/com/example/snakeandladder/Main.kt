@@ -1,9 +1,9 @@
 package com.example.snakeandladder
 
-const val maxPositionOnBoard = 200
+const val maxPositionOnBoard = 100
 const val minPositionOnBoard = 0
-const val minValueOnDice = 2
-const val maxValueOnDice = 12
+const val minValueOnDice = 1
+const val maxValueOnDice = 6
 
 fun main() {
     val snakes = getSnakes()
@@ -36,8 +36,8 @@ fun getSnakes(): List<Snake> {
 }
 
 fun getPlayers(): List<Player> {
-    val players = mutableListOf<Player>()
 
+    val players = mutableListOf<Player>()
     var numberOfPlayers = readNextInt()
     while (numberOfPlayers-- != 0) {
         val name = readLine()!!
